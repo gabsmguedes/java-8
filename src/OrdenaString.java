@@ -13,14 +13,26 @@ public class OrdenaString {
 
         Comparator<String> comparator = new ComparadorPorTamanho();
         //Collections.sort(palavras, comparator);
-        palavras.sort(comparator);
+//        palavras.sort((string1, string2) -> {
+//            if (string1.length() < string2.length())
+//                return -1;
+//            if (string1.length() > string2.length())
+//                return 2;
+//            return 0;
+//        });
+
+        //palavras.sort((string1, string2) -> Integer.compare(string1.length(), string2.length()));
+
+        palavras.sort(Comparator.comparingInt(String::length));
+
         System.out.println(palavras);
 
 //        for(String p : palavras){
 //            System.out.println(p);
 //        }
-        Consumer<String> consumer = new ImprimeNaLinha();
-        palavras.forEach(consumer);
+//        Consumer<String> consumer = new ImprimeNaLinha();
+
+        palavras.forEach(s -> System.out.println(s));
     }
 }
 
@@ -36,9 +48,9 @@ class ComparadorPorTamanho implements Comparator<String> {
 
     @Override
     public int compare(String string1, String string2) {
-        if(string1.length() < string2.length())
+        if (string1.length() < string2.length())
             return -1;
-        if(string1.length() > string2.length())
+        if (string1.length() > string2.length())
             return 2;
         return 0;
     }
