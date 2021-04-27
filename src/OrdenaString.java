@@ -25,6 +25,9 @@ public class OrdenaString {
 
         palavras.sort(Comparator.comparingInt(String::length));
 
+        palavras.sort(Comparator.comparing(s -> s.length()));
+        palavras.sort(Comparator.comparing(String::length));
+
         System.out.println(palavras);
 
 //        for(String p : palavras){
@@ -33,6 +36,7 @@ public class OrdenaString {
 //        Consumer<String> consumer = new ImprimeNaLinha();
 
         palavras.forEach(s -> System.out.println(s));
+        palavras.forEach(System.out::println);
     }
 }
 
