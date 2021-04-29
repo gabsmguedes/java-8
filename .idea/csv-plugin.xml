@@ -10,6 +10,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\src\Datas.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\ExemploCursos.java">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\OrdenaString.java">
           <value>
             <Attribute>
